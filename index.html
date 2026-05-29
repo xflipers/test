@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Card House - каталог игральных карт</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Card House">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>
+          <strong>Card House</strong>
+          <small>каталог игральных карт</small>
+        </span>
+      </a>
+
+      <label class="search">
+        <span class="search-icon" aria-hidden="true"></span>
+        <input id="searchInput" type="search" placeholder="Поиск по названию, типу или материалу">
+      </label>
+    </header>
+
+    <main class="catalog-shell">
+      <aside class="filters" aria-label="Фильтры каталога">
+        <section class="filter-block">
+          <h2>Вид карт</h2>
+          <div class="chip-group" id="typeFilters"></div>
+        </section>
+
+        <section class="filter-block">
+          <h2>Подвид</h2>
+          <div class="chip-group" id="subtypeFilters"></div>
+        </section>
+
+        <section class="filter-block">
+          <h2>Материал</h2>
+          <div class="chip-group" id="materialFilters"></div>
+        </section>
+      </aside>
+
+      <section class="catalog">
+        <div class="catalog-head">
+          <div>
+            <p class="eyebrow">В наличии</p>
+            <h1>Игральные карты</h1>
+          </div>
+          <p id="resultCount" class="result-count"></p>
+        </div>
+
+        <div class="category-strip" aria-label="Быстрые категории">
+          <button class="quick-card is-active" data-quick="Все">
+            <span class="suit red">♥</span>
+            <strong>Все</strong>
+            <small>полный каталог</small>
+          </button>
+          <button class="quick-card" data-quick="Покер">
+            <span class="suit black">♠</span>
+            <strong>Покер</strong>
+            <small>standard, jumbo</small>
+          </button>
+          <button class="quick-card" data-quick="Коллекционные">
+            <span class="suit red">♦</span>
+            <strong>Коллекционные</strong>
+            <small>подарочные серии</small>
+          </button>
+          <button class="quick-card" data-quick="Фокусы">
+            <span class="suit black">♣</span>
+            <strong>Фокусы</strong>
+            <small>trick decks</small>
+          </button>
+        </div>
+
+        <div id="productGrid" class="product-grid"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
